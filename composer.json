@@ -1,0 +1,19 @@
+{
+    "name": "gzydong/weather",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gzydong",
+            "email": "837215079@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gzydong\\Weather\\": "src"
+        }
+    }
+}
