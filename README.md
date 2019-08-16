@@ -1,7 +1,7 @@
 <h1 align="center"> weather </h1>
 
 <p align="center"> .</p>
-
+[![StyleCI](https://github.styleci.io/repos/202547369/shield?branch=master)]
 
 ## Installing
 
