@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the gzydong/weather.
+ *
+ * (c) overtrue <r.yuandong@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace Gzydong\Weather;
 
@@ -10,13 +18,13 @@ use Overtrue\Weather\Exceptions\InvalidArgumentException;
 class Weather
 {
     protected $key;
+
     protected $guzzleOptions = [];
 
     public function __construct(string $key)
     {
         $this->key = $key;
     }
-
 
     public function getHttpClient()
     {
@@ -28,7 +36,7 @@ class Weather
         $this->guzzleOptions = $options;
     }
 
-    public function getWeather($city, $type = 'base',$format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
@@ -40,12 +48,11 @@ class Weather
             throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
         }
 
-
         $query = array_filter([
             'key' => $this->key,
             'city' => $city,
             'output' => $format,
-            'extensions' =>  $type,
+            'extensions' => $type,
         ]);
 
         try {
@@ -58,11 +65,8 @@ class Weather
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
 
-
-
         return 'json' === $format ? json_decode($response, true) : $response;
     }
-
 
     public function getLiveWeather($city, $format = 'json')
     {
