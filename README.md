@@ -1,6 +1,6 @@
 <h1 align="center"> weather </h1>
 
-<p align="center"> .</p>
+<p align="center">这是基于高德地图的天气查询接口 .</p>
 
 ![StyleCI build status](https://github.styleci.io/repos/202547369/shield) 
 
