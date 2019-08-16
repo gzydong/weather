@@ -2,7 +2,7 @@
 
 <p align="center"> .</p>
 
-[StyleCI build status](https://github.styleci.io/repos/202547369/shield) 
+![StyleCI build status](https://github.styleci.io/repos/202547369/shield) 
 
 ## Installing
 
